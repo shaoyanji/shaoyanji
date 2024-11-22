@@ -8,6 +8,7 @@
 ![Tailwind](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![ReactJS](https://img.shields.io/badge/-ReactJS-%2361DAFB?style=for-the-badge&logo=react&logoColor=white)
 ![HTMX](https://img.shields.io/badge/-htmx-%23643AFB?style=for-the-badge&logo=htmx&logoColor=white)
+![WASM]([https://img.shields.io/badge/-htmx-%23643AFB?style=for-the-badge&logo=htmx&logoColor=white](https://img.shields.io/badge/-WASM-%83643AFB?style=for-the-badge&logo=webassembly&logoColor=white))
 ![FastAPI](https://img.shields.io/badge/-FastAPI-c643AFB?style=for-the-badge&logo=fastapi&logoColor=white)
 
 #### 🙉 - Backend:
