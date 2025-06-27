@@ -1,9 +1,9 @@
 frontend:
   - HTML5: E34F26
-  - Tailwind: 06B6D4
+  - TailwindCSS: 06B6D4
   - React: 00B7B7
   - HTMX: 00C7B7
-  - WASM: FF6C37
+  - WebAssembly: FF6C37
   - FastAPI: c643AFB
 backend:
   - Node.js: 43853D.svg
@@ -19,7 +19,7 @@ hosting:
   - Postman: FF6C37
 devops:
   - Python: 14354C
-  - Shell_Script: 12101A
+  - GNU-Bash: 12101A
   - Git: E44C30
   - NixOS: 00B7B7
   - Kubernetes: A0B3B7
@@ -30,7 +30,7 @@ others:
   - Ubuntu: E95420
   - Docker: 42542A
 ide:
-  - Colab: F9AB00
+  - GoogleColab: F9AB00
   - Neovim: 0078D4
   - Obsidian: 0052CC
   - Notion: 00000F

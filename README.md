@@ -5,10 +5,10 @@
 #### 🙈 - Frontend:
 
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)
-![HTML](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=Tailwind&logoColor=white)
+![HTML](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=TailwindCSS&logoColor=white)
 ![HTML](https://img.shields.io/badge/React-00B7B7?style=for-the-badge&logo=React&logoColor=white)
 ![HTML](https://img.shields.io/badge/HTMX-00C7B7?style=for-the-badge&logo=HTMX&logoColor=white)
-![HTML](https://img.shields.io/badge/WASM-FF6C37?style=for-the-badge&logo=WASM&logoColor=white)
+![HTML](https://img.shields.io/badge/WebAssembly-FF6C37?style=for-the-badge&logo=WebAssembly&logoColor=white)
 ![HTML](https://img.shields.io/badge/FastAPI-c643AFB?style=for-the-badge&logo=FastAPI&logoColor=white)
 #### 🙉 - Backend:
 ![HTML](https://img.shields.io/badge/Node.js-43853D.svg?style=for-the-badge&logo=Node.js&logoColor=white)
@@ -24,7 +24,7 @@
 ![HTML](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white)
 ### DevOps ♾️:
 ![HTML](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=Python&logoColor=white)
-![HTML](https://img.shields.io/badge/Shell_Script-12101A?style=for-the-badge&logo=Shell_Script&logoColor=white)
+![HTML](https://img.shields.io/badge/GNU-Bash-12101A?style=for-the-badge&logo=GNU-Bash&logoColor=white)
 ![HTML](https://img.shields.io/badge/Git-E44C30?style=for-the-badge&logo=Git&logoColor=white)
 ![HTML](https://img.shields.io/badge/NixOS-00B7B7?style=for-the-badge&logo=NixOS&logoColor=white)
 ![HTML](https://img.shields.io/badge/Kubernetes-A0B3B7?style=for-the-badge&logo=Kubernetes&logoColor=white)
@@ -35,7 +35,7 @@
 ![HTML](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=Ubuntu&logoColor=white)
 ![HTML](https://img.shields.io/badge/Docker-42542A?style=for-the-badge&logo=Docker&logoColor=white)
 ### IDEs and Tools 🛠:
-![HTML](https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=Colab&logoColor=white)
+![HTML](https://img.shields.io/badge/GoogleColab-F9AB00?style=for-the-badge&logo=GoogleColab&logoColor=white)
 ![HTML](https://img.shields.io/badge/Neovim-0078D4?style=for-the-badge&logo=Neovim&logoColor=white)
 ![HTML](https://img.shields.io/badge/Obsidian-0052CC?style=for-the-badge&logo=Obsidian&logoColor=white)
 ![HTML](https://img.shields.io/badge/Notion-00000F?style=for-the-badge&logo=Notion&logoColor=white)

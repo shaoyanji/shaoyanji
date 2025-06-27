@@ -11,6 +11,9 @@ vars:
   SOURCE: src/skills.yaml
 
 tasks:
+  gitpush:
+    cmds:
+      - git add . && git commit -m "updated README.md" && git push
   default:
     cmds:
       - echo '<p>&nbsp;<img align="center" src="https://readmestats.999857.xyz/api?username=shaoyanji&show_icons=true&locale=en&theme=tokyonight" alt="shaoyanji stats" /></p>' > {{.README}}
@@ -32,6 +35,7 @@ tasks:
       - task category:others
       - echo "### IDEs and Tools 🛠:" >> {{.README}}
       - task category:ide
+      - task gitpush
   category:*:
     vars:
       CATEG: "{{index .MATCH 0}}"
