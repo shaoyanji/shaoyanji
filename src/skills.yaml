@@ -1,14 +1,14 @@
 frontend:
   - HTML5: E34F26
   - Tailwind: 06B6D4
-  - React: 2361DAFB
-  - HTMX: 23643AFB
-  - WASM: 83643AFB
+  - React: 00B7B7
+  - HTMX: 00C7B7
+  - WASM: FF6C37
   - FastAPI: c643AFB
 backend:
   - Node.js: 43853D.svg
   - Go: 00C7B7
-  - NGINX: 00C7B7
+  - NGINX: c643AFB
 database:
   - PostgreSQL: 4EA94B
   - MySQL: 005C84
@@ -19,7 +19,7 @@ hosting:
   - Postman: FF6C37
 devops:
   - Python: 14354C
-  - Shell Script: 12101A
+  - Shell_Script: 12101A
   - Git: E44C30
   - NixOS: 00B7B7
   - Kubernetes: A0B3B7
