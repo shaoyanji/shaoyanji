@@ -1,0 +1,58 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  README: README.md
+  PREFIX: "!["
+  DOMAIN: "](https://img.shields.io/badge/"
+  STYLE: "?style=for-the-badge&logo="
+  SUFFIX: "&logoColor=white)"
+  SOURCE: src/skills.yaml
+
+tasks:
+  default:
+    cmds:
+      - echo '<p>&nbsp;<img align="center" src="https://readmestats.999857.xyz/api?username=shaoyanji&show_icons=true&locale=en&theme=tokyonight" alt="shaoyanji stats" /></p>' > {{.README}}
+      - echo "" >> {{.README}}
+      - echo "## 🔨 Languages & Frameworks & Skills ⭐️:"  >>{{.README}}
+      - echo "### Web Design & Development 💻:" >> {{.README}}
+      - echo "#### 🙈 - Frontend:" >> {{.README}}
+      - echo "" >> {{.README}}
+      - task category:frontend
+      - echo "#### 🙉 - Backend:" >> {{.README}}
+      - task category:backend
+      - echo "#### 🙊 - Database:" >> {{.README}}
+      - task category:database
+      - echo "#### 🐵 - Hosting Services and Web Tools:" >> {{.README}}
+      - task category:hosting
+      - echo "### DevOps ♾️:" >> {{.README}}
+      - task category:devops
+      - echo "### Others:" >> {{.README}}
+      - task category:others
+      - echo "### IDEs and Tools 🛠:" >> {{.README}}
+      - task category:ide
+  category:*:
+    vars:
+      CATEG: "{{index .MATCH 0}}"
+      SIZE:
+        sh: yq '.{{.CATEG}}.[]|key' {{.SOURCE}}
+    cmds:
+      - for: { var: SIZE }
+        cmd: echo "{{.PREFIX}}HTML{{.DOMAIN}}$(task skill:{{.CATEG}}:{{.ITEM}})-$(task color:{{.CATEG}}:{{.ITEM}}){{.STYLE}}$(task skill:{{.CATEG}}:{{.ITEM}}){{.SUFFIX}}" >> {{.README}}
+
+  skill:*:*:
+    vars:
+      CATEG: "{{index .MATCH 0}}"
+      INDEX: "{{index .MATCH 1}}"
+    cmds:
+      - yq '.{{.CATEG}}.{{.INDEX}}.[]|key' {{.SOURCE}}
+      # - yq '.{{.CATEG}}.{{.INDEX}}.[]' {{.SOURCE}}
+
+  color:*:*:
+    vars:
+      CATEG: "{{index .MATCH 0}}"
+      INDEX: "{{index .MATCH 1}}"
+    cmds:
+      # - yq '.{{.CATEG}}.{{.INDEX}}.[]|key' {{.SOURCE}}
+      - yq '.{{.CATEG}}.{{.INDEX}}.[]' {{.SOURCE}}
