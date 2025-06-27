@@ -17,24 +17,14 @@ tasks:
   default:
     vars:
       USER:
-        sh: yq '.name' {{.SOURCE}}
-      TITLE:
-        sh: yq '.title' {{.SOURCE}}
-      STITLE:
-        sh: yq '.subtitle' {{.SOURCE}}
+        sh: yq '.name.[].title' {{.SOURCE}}
+      KEY:
+        sh: yq '.[]|key' {{.SOURCE}}
     cmds:
       - echo '<p>&nbsp;<img align="center" src="https://readmestats.999857.xyz/api?username={{.USER}}&show_icons=true&locale=en&theme=tokyonight" alt="{{.USER}} stats" /></p>' > {{.README}}
       - echo "" >> {{.README}}
-      - echo "{{.TITLE}}"  >>{{.README}}
-      - echo "{{.STITLE}}" >> {{.README}}
-      - echo "" >> {{.README}}
-      - task category:frontend
-      - task category:backend
-      - task category:database
-      - task category:hosting
-      - task category:devops
-      - task category:others
-      - task category:ide
+      - for: { var: KEY }
+        cmd: task category:{{.ITEM}}
       - task gitpush
   category:*:
     vars:

@@ -1,6 +1,9 @@
-name: shaoyanji
-title: "## 🔨 Languages & Frameworks & Skills ⭐️:"
-subtitle: "### Web Design & Development 💻:"
+name:
+  - title: "shaoyanji"
+title:
+  - title: "## 🔨 Languages & Frameworks & Skills ⭐️:"
+subtitle:
+  - title: "### Web Design & Development 💻:"
 frontend:
   - title: "#### 🙈 - Frontend:"
   - list:
