@@ -17,7 +17,7 @@ tasks:
   default:
     vars:
       USER:
-        sh: yq '.name.[].title' {{.SOURCE}}
+        sh: yq '.name' {{.SOURCE}}
       KEY:
         sh: yq '.[]|key' {{.SOURCE}}
     cmds:
