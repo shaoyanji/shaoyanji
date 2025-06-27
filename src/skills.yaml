@@ -1,37 +1,53 @@
 name: shaoyanji
+title: "## 🔨 Languages & Frameworks & Skills ⭐️:"
+subtitle: "### Web Design & Development 💻:"
 frontend:
-  - HTML5: E34F26
-  - TailwindCSS: 06B6D4
-  - React: 00B7B7
-  - HTMX: 00C7B7
-  - WebAssembly: FF6C37
-  - FastAPI: c643AFB
+  - title: "#### 🙈 - Frontend:"
+  - list:
+      - HTML5: E34F26
+      - TailwindCSS: 06B6D4
+      - React: 00B7B7
+      - HTMX: 00C7B7
+      - WebAssembly: FF6C37
+      - FastAPI: c643AFB
 backend:
-  - Node.js: 43853D.svg
-  - Go: 00C7B7
-  - NGINX: c643AFB
+  - title: "#### 🙉 - Backend"
+  - list:
+      - Node.js: 43853D.svg
+      - Go: 00C7B7
+      - NGINX: c643AFB
 database:
-  - PostgreSQL: 4EA94B
-  - MySQL: 005C84
+  - title: "#### 🙊 - Database:"
+  - list:
+      - PostgreSQL: 4EA94B
+      - MySQL: 005C84
 hosting:
-  - Netlify: 00C7B7
-  - Firebase: 039BE5
-  - Vite: 646CFF
-  - Postman: FF6C37
+  - title: "#### 🐵 - Hosting Services and Web Tools:"
+  - list:
+      - Netlify: 00C7B7
+      - Firebase: 039BE5
+      - Vite: 646CFF
+      - Postman: FF6C37
 devops:
-  - Python: 14354C
-  - GNU-Bash: 12101A
-  - Git: E44C30
-  - NixOS: 00B7B7
+  - title: "### DevOps ♾️:"
+  - list:
+      - Python: 14354C
+      - GNU-Bash: 12101A
+      - Git: E44C30
+      - NixOS: 00B7B7
   - Kubernetes: A0B3B7
 others:
-  - C++: 9C033A.svg
-  - Nim: 00042A
-  - Lua: 00094B
-  - Ubuntu: E95420
-  - Docker: 42542A
+  - title: "### Others:"
+  - list:
+      - C++: 9C033A.svg
+      - Nim: 00042A
+      - Lua: 00094B
+      - Ubuntu: E95420
+      - Docker: 42542A
 ide:
-  - GoogleColab: F9AB00
-  - Neovim: 0078D4
-  - Obsidian: 0052CC
-  - Notion: 00000F
+  - title: "### IDEs and Tools 🛠:"
+  - list:
+      - GoogleColab: F9AB00
+      - Neovim: 0078D4
+      - Obsidian: 0052CC
+      - Notion: 00000F

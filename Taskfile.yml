@@ -18,35 +18,41 @@ tasks:
     vars:
       USER:
         sh: yq '.name' {{.SOURCE}}
+      TITLE:
+        sh: yq '.title' {{.SOURCE}}
+      STITLE:
+        sh: yq '.subtitle' {{.SOURCE}}
     cmds:
       - echo '<p>&nbsp;<img align="center" src="https://readmestats.999857.xyz/api?username={{.USER}}&show_icons=true&locale=en&theme=tokyonight" alt="{{.USER}} stats" /></p>' > {{.README}}
       - echo "" >> {{.README}}
-      - echo "## 🔨 Languages & Frameworks & Skills ⭐️:"  >>{{.README}}
-      - echo "### Web Design & Development 💻:" >> {{.README}}
-      - echo "#### 🙈 - Frontend:" >> {{.README}}
+      - echo "{{.TITLE}}"  >>{{.README}}
+      - echo "{{.STITLE}}" >> {{.README}}
+      # - echo "#### 🙈 - Frontend:" >> {{.README}}
       - echo "" >> {{.README}}
       - task category:frontend
-      - echo "#### 🙉 - Backend:" >> {{.README}}
+      # - echo "#### 🙉 - Backend:" >> {{.README}}
       - task category:backend
-      - echo "#### 🙊 - Database:" >> {{.README}}
+      # - echo "#### 🙊 - Database:" >> {{.README}}
       - task category:database
-      - echo "#### 🐵 - Hosting Services and Web Tools:" >> {{.README}}
+      # - echo "#### 🐵 - Hosting Services and Web Tools:" >> {{.README}}
       - task category:hosting
-      - echo "### DevOps ♾️:" >> {{.README}}
+      # - echo "### DevOps ♾️:" >> {{.README}}
       - task category:devops
-      - echo "### Others:" >> {{.README}}
+      # - echo "### Others:" >> {{.README}}
       - task category:others
-      - echo "### IDEs and Tools 🛠:" >> {{.README}}
+      # - echo "### IDEs and Tools 🛠:" >> {{.README}}
       - task category:ide
       - task gitpush
   category:*:
     vars:
       CATEG: "{{index .MATCH 0}}"
       SIZE:
-        sh: yq '.{{.CATEG}}.[]|key' {{.SOURCE}}
+        sh: yq '.{{.CATEG}}.[].list.[]|key' {{.SOURCE}}
+      TITLE:
+        sh: yq '.{{.CATEG}}.[0].title' {{.SOURCE}}
     cmds:
       - for: { var: SIZE }
-        cmd: echo "{{.PREFIX}}$(task skill:{{.CATEG}}:{{.ITEM}}){{.DOMAIN}}$(task skill:{{.CATEG}}:{{.ITEM}})-$(task color:{{.CATEG}}:{{.ITEM}}){{.STYLE}}$(task skill:{{.CATEG}}:{{.ITEM}}){{.SUFFIX}}" >> {{.README}}
+        cmd: echo "TITLE" >> {{.README}} && echo "{{.PREFIX}}$(task skill:{{.CATEG}}:{{.ITEM}}){{.DOMAIN}}$(task skill:{{.CATEG}}:{{.ITEM}})-$(task color:{{.CATEG}}:{{.ITEM}}){{.STYLE}}$(task skill:{{.CATEG}}:{{.ITEM}}){{.SUFFIX}}" >> {{.README}}
 
   skill:*:*:
     vars:
