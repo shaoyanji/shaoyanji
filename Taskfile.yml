@@ -22,7 +22,6 @@ tasks:
         sh: yq '.[]|key' {{.SOURCE}}
     cmds:
       - echo '<p>&nbsp;<img align="center" src="https://readmestats.999857.xyz/api?username={{.USER}}&show_icons=true&locale=en&theme=tokyonight" alt="{{.USER}} stats" /></p>' > {{.README}}
-      - echo "" >> {{.README}}
       - for: { var: KEY }
         cmd: task category:{{.ITEM}}
       - task gitpush
