@@ -43,7 +43,7 @@ tasks:
         sh: yq '.{{.CATEG}}.[]|key' {{.SOURCE}}
     cmds:
       - for: { var: SIZE }
-        cmd: echo "{{.PREFIX}}HTML{{.DOMAIN}}$(task skill:{{.CATEG}}:{{.ITEM}})-$(task color:{{.CATEG}}:{{.ITEM}}){{.STYLE}}$(task skill:{{.CATEG}}:{{.ITEM}}){{.SUFFIX}}" >> {{.README}}
+        cmd: echo "{{.PREFIX}}$(task skill:{{.CATEG}}:{{.ITEM}}){{.DOMAIN}}$(task skill:{{.CATEG}}:{{.ITEM}})-$(task color:{{.CATEG}}:{{.ITEM}}){{.STYLE}}$(task skill:{{.CATEG}}:{{.ITEM}}){{.SUFFIX}}" >> {{.README}}
 
   skill:*:*:
     vars:
