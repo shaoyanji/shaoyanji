@@ -15,8 +15,11 @@ tasks:
     cmds:
       - git add . && git commit -m "updated README.md" && git push
   default:
+    vars:
+      USER:
+        sh: yq '.name' {{.SOURCE}}
     cmds:
-      - echo '<p>&nbsp;<img align="center" src="https://readmestats.999857.xyz/api?username=shaoyanji&show_icons=true&locale=en&theme=tokyonight" alt="shaoyanji stats" /></p>' > {{.README}}
+      - echo '<p>&nbsp;<img align="center" src="https://readmestats.999857.xyz/api?username={{.USER}}&show_icons=true&locale=en&theme=tokyonight" alt="{{.USER}} stats" /></p>' > {{.README}}
       - echo "" >> {{.README}}
       - echo "## 🔨 Languages & Frameworks & Skills ⭐️:"  >>{{.README}}
       - echo "### Web Design & Development 💻:" >> {{.README}}
