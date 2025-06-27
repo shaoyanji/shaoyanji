@@ -26,6 +26,7 @@
 ![GNU-Bash](https://img.shields.io/badge/GNU-Bash-12101A?style=for-the-badge&logo=GNU-Bash&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-E44C30?style=for-the-badge&logo=Git&logoColor=white)
 ![NixOS](https://img.shields.io/badge/NixOS-00B7B7?style=for-the-badge&logo=NixOS&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-A0B3B7?style=for-the-badge&logo=Kubernetes&logoColor=white)
 ### Others:
 ![C++](https://img.shields.io/badge/C++-9C033A.svg?style=for-the-badge&logo=C++&logoColor=white)
 ![Nim](https://img.shields.io/badge/Nim-00042A?style=for-the-badge&logo=Nim&logoColor=white)

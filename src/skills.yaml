@@ -37,7 +37,7 @@ devops:
       - GNU-Bash: 12101A
       - Git: E44C30
       - NixOS: 00B7B7
-  - Kubernetes: A0B3B7
+      - Kubernetes: A0B3B7
 others:
   - title: "### Others:"
   - list:
