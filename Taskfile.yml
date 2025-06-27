@@ -47,12 +47,13 @@ tasks:
     vars:
       CATEG: "{{index .MATCH 0}}"
       SIZE:
-        sh: yq '.{{.CATEG}}.[].list.[]|key' {{.SOURCE}}
+        sh: yq '.{{.CATEG}}.[1].list.[]|key' {{.SOURCE}}
       TITLE:
         sh: yq '.{{.CATEG}}.[0].title' {{.SOURCE}}
     cmds:
+      - echo "{{.TITLE}}" >> {{.README}}
       - for: { var: SIZE }
-        cmd: echo "{{.TITLE}}" >> {{.README}} && echo "{{.PREFIX}}$(task skill:{{.CATEG}}:{{.ITEM}}){{.DOMAIN}}$(task skill:{{.CATEG}}:{{.ITEM}})-$(task color:{{.CATEG}}:{{.ITEM}}){{.STYLE}}$(task skill:{{.CATEG}}:{{.ITEM}}){{.SUFFIX}}" >> {{.README}}
+        cmd: echo "{{.PREFIX}}$(task skill:{{.CATEG}}:{{.ITEM}}){{.DOMAIN}}$(task skill:{{.CATEG}}:{{.ITEM}})-$(task color:{{.CATEG}}:{{.ITEM}}){{.STYLE}}$(task skill:{{.CATEG}}:{{.ITEM}}){{.SUFFIX}}" >> {{.README}}
 
   skill:*:*:
     vars:
