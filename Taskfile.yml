@@ -4,10 +4,6 @@ version: "3"
 
 vars:
   README: README.md
-  PREFIX: "!["
-  DOMAIN: "](https://img.shields.io/badge/"
-  STYLE: "?style=for-the-badge&logo="
-  SUFFIX: "&logoColor=white)"
   SOURCE: src/skills.yaml
 
 tasks:
@@ -27,6 +23,10 @@ tasks:
       - task gitpush
   category:*:
     vars:
+      PREFIX: "!["
+      DOMAIN: "](https://img.shields.io/badge/"
+      STYLE: "?style=for-the-badge&logo="
+      SUFFIX: "&logoColor=white)"
       CATEG: "{{index .MATCH 0}}"
       SIZE:
         sh: yq '.{{.CATEG}}.[].list.[]|key' {{.SOURCE}}
