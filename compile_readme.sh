@@ -28,4 +28,7 @@ for category in frontend backend database hosting devops others ide; do
         # Create badge markdown
         echo "![${skill}](https://img.shields.io/badge/${skill}-${color}?style=for-the-badge&logo=${skill}&logoColor=white)" >> "$README"
     done
+    
+    # Add blank line after each category
+    echo "" >> "$README"
 done
