@@ -11,42 +11,9 @@ tasks:
     cmds:
       - git add . && git commit -m "updated README.md" && git push
   default:
-    vars:
-      USER:
-        sh: yq '.name' {{.SOURCE}}
-      KEY:
-        sh: yq '.[]|key' {{.SOURCE}}
     cmds:
-      - echo '<p>&nbsp;<img align="center" src="https://readmestats.999857.xyz/api?username={{.USER}}&show_icons=true&locale=en&theme=tokyonight" alt="{{.USER}} stats" /></p>' > {{.README}}
-      - for: { var: KEY }
-        cmd: task category:{{.ITEM}}
+      - ./compile_readme.sh
       - task gitpush
-  category:*:
-    vars:
-      PREFIX: "!["
-      DOMAIN: "](https://img.shields.io/badge/"
-      STYLE: "?style=for-the-badge&logo="
-      SUFFIX: "&logoColor=white)"
-      CATEG: "{{index .MATCH 0}}"
-      SIZE:
-        sh: yq '.{{.CATEG}}.[].list.[]|key' {{.SOURCE}}
-      TITLE:
-        sh: yq '.{{.CATEG}}.[0].title' {{.SOURCE}}
+  compile:
     cmds:
-      - echo "{{.TITLE}}" >> {{.README}}
-      - for: { var: SIZE }
-        cmd: echo "{{.PREFIX}}$(task skill:{{.CATEG}}:{{.ITEM}}){{.DOMAIN}}$(task skill:{{.CATEG}}:{{.ITEM}})-$(task color:{{.CATEG}}:{{.ITEM}}){{.STYLE}}$(task skill:{{.CATEG}}:{{.ITEM}}){{.SUFFIX}}" >> {{.README}}
-
-  skill:*:*:
-    vars:
-      CATEG: "{{index .MATCH 0}}"
-      INDEX: "{{index .MATCH 1}}"
-    cmds:
-      - yq '.{{.CATEG}}.[].list.{{.INDEX}}.[]|key' {{.SOURCE}}
-
-  color:*:*:
-    vars:
-      CATEG: "{{index .MATCH 0}}"
-      INDEX: "{{index .MATCH 1}}"
-    cmds:
-      - yq '.{{.CATEG}}.[].list.{{.INDEX}}.[]' {{.SOURCE}}
+      - ./compile_readme.sh
