@@ -10,13 +10,14 @@ USER=$(yq '.name' "$SOURCE")
 
 # Start with header image
 echo '<p>&nbsp;<img align="center" src="https://readmestats.999857.xyz/api?username='"$USER"'&show_icons=true&locale=en&theme=tokyonight" alt="'"$USER"' stats" /></p>' > "$README"
+echo '' >>"$README"
 
 # Add main title
 yq '.title[0].title' "$SOURCE" >> "$README"
-
+echo '' >>"$README"
 # Add subtitle
 yq '.subtitle[0].title' "$SOURCE" >> "$README"
-
+echo '' >>"$README"
 # Process each category
 for category in frontend backend database hosting devops others ide; do
     # Get category title
