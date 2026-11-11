@@ -9,7 +9,7 @@ vars:
 tasks:
   gitpush:
     cmds:
-      - git add . && git commit -m "updated README.md" && git push
+      - git add -A && git commit -m "rebuild profile README" && git push
   default:
     cmds:
       - ./compile_readme.sh

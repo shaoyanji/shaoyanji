@@ -1,55 +1,86 @@
 name: "shaoyanji"
-title:
-  - title: "## 🔨 Languages & Frameworks & Skills ⭐️:"
-subtitle:
-  - title: "### Web Design & Development 💻:"
+banner: "https://res.cloudinary.com/de1eajx01/image/upload/f_auto,q_auto,w_1200/assets/repos/shaoyanji"
+# The card goes straight at the instance that answers: readmestats.999857.xyz
+# only 302s here, and the upstream github-readme-stats.vercel.app deployment
+# answers 503 DEPLOYMENT_PAUSED. Measured 2026-11-11.
+stats: "https://github-readme-stats.zohan.tech/api?username=shaoyanji&show_icons=true&locale=en&theme=tokyonight&hide_border=true&count_private=true"
+intro: >-
+  I build systems that hold their own state: one Nix flake for a fleet of NixOS and Darwin hosts,
+  thin Go services with immutable records, and research on streaming state machines. Self-hosted,
+  offline-first, and readable from a terminal.
+title: "## Building"
+subtitle: "## Elsewhere"
+# Colours are quoted because YAML reads 009688 as a number and 4169E1 as
+# exponent notation: unquoted they reach shields as "9688.0" and "4.169E+4".
+# An entry is either a colour or {c: colour, logo: simple-icons slug} — display
+# names like Node.js and C++ are not slugs, so a badge without an override
+# renders text with no icon.
 frontend:
-  - title: "#### 🙈 - Frontend:"
+  - title: "### Frontend"
   - list:
-      - HTML5: E34F26
-      - TailwindCSS: 06B6D4
-      - React: 00B7B7
-      - HTMX: 00C7B7
-      - WebAssembly: FF6C37
-      - FastAPI: c643AFB
+      - HTML5: "E34F26"
+      - TailwindCSS: "06B6D4"
+      - React: "61DAFB"
+      - HTMX: "3366CC"
+      - WebAssembly: "654FF0"
 backend:
-  - title: "#### 🙉 - Backend"
+  - title: "### Backend"
   - list:
-      - Node.js: 43853D.svg
-      - Go: 00C7B7
-      - NGINX: c643AFB
+      - FastAPI: "009688"
+      - Go: "00ADD8"
+      - NGINX: "009639"
+      - "Node.js": {c: "5FA04E", logo: nodedotjs}
 database:
-  - title: "#### 🙊 - Database:"
+  - title: "### Data"
   - list:
-      - PostgreSQL: 4EA94B
-      - MySQL: 005C84
+      - PostgreSQL: "4169E1"
+      - MySQL: "4479A1"
 hosting:
-  - title: "#### 🐵 - Hosting Services and Web Tools:"
+  - title: "### Hosting"
   - list:
-      - Netlify: 00C7B7
-      - Firebase: 039BE5
-      - Vite: 646CFF
-      - Postman: FF6C37
+      - Netlify: "00C7B7"
+      - Firebase: "FFCA28"
+      - Vite: "646CFF"
+      - Postman: "FF6C37"
 devops:
-  - title: "### DevOps ♾️:"
+  - title: "### Systems"
   - list:
-      - Python: 14354C
-      - GNU-Bash: 12101A
-      - Git: E44C30
-      - NixOS: 00B7B7
-      - Kubernetes: A0B3B7
+      - NixOS: "5277C3"
+      - Nix: {c: "5277C3", logo: nixos}
+      - Python: "3776AB"
+      - Bash: {c: "4EAA25", logo: gnubash}
+      - Git: "F05032"
+      - Kubernetes: "326CE5"
 others:
-  - title: "### Others:"
+  - title: "### Also"
   - list:
-      - C++: 9C033A.svg
-      - Nim: 00042A
-      - Lua: 00094B
-      - Ubuntu: E95420
-      - Docker: 42542A
+      - "C++": {c: "00599C", logo: cplusplus}
+      - Nim: "FFE953"
+      - Lua: "2C2D72"
+      - Ubuntu: "E95420"
+      - Docker: "2496ED"
 ide:
-  - title: "### IDEs and Tools 🛠:"
+  - title: "### Tools"
   - list:
-      - GoogleColab: F9AB00
-      - Neovim: 0078D4
-      - Obsidian: 0052CC
-      - Notion: 00000F
+      - GoogleColab: {c: "F9AB00", logo: googlecolab}
+      - Neovim: "57A143"
+      - Obsidian: "7C3AED"
+      - Notion: "000000"
+projects:
+  - repo: nixconfig
+    url: "https://github.com/shaoyanji/nixconfig"
+    what: One flake for NixOS, nix-darwin, Home Manager and WSL; hosts, modules, tasks and docs from a single inventory.
+  - repo: bountystash
+    url: "https://github.com/shaoyanji/bountystash"
+    what: Thin server-rendered Go app that turns messy asks into immutable, hash-stable work packets.
+  - repo: pancakes-harness
+    url: "https://github.com/shaoyanji/pancakes-harness"
+    what: Local-first context and egress kernel; typed ingress, replayable consult records, bounded packets.
+  - repo: fibtransponder
+    url: "https://github.com/shaoyanji/fibtransponder"
+    what: Fibonacci-radix streaming state machine, tested as a tokenization substrate rather than a product.
+elsewhere:
+  - label: "Writing and site"
+    url: "https://shaoyanji.is-a.dev"
+  - label: "Hub of the writing and the repos behind it"
+    url: "https://github.com/shaoyanji/hub"
